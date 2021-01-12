@@ -25,7 +25,14 @@
 
 <body>
   <body background="img/背景.jpg"0>;
-
+    
+			<style>
+				.image.fit {
+							display: block;
+							width: 100%;
+							}
+				</style>
+	</article>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
@@ -109,8 +116,31 @@
                             <center><h1 class="text-primary">照片</h1></center>
                             <div class="subheading mb-3"></div>
                             <center>
+                              <a class="image fit"><img id=macarone src="img/mosaEClWat.jpeg" width=450 height=300 alt="" />
                             <img src="https://modo-phinf.pstatic.net/20180711_298/1531295316708VSXjt_JPEG/mosaEClWat.jpeg?type=w1100" width="450" height="300">
                             </center>
+                            <script language =javascript >//換圖程式
+                              var curIndex=0;
+                              //每秒钟显示一张，数组共有5张图片放在Photos文件夹下。
+                              var timeInterval=3000;
+                              var aaa=new Array();
+                              aaa[0]="img/mosaEClWat.jpeg";
+                              aaa[2]="img/map(1).jpg.jpg";
+                              setInterval(changeImg,timeInterval);
+                              function changeImg()
+                              {
+                              var obj=document.getElementById("macarone");
+                              if (curIndex==aaa.length-1)
+                              {
+                              curIndex=0;
+                              }
+                              else
+                              {
+                              curIndex+=1;
+                              }
+                              obj.src=aaa[curIndex];
+                              }
+                              </script>
                         </div>
                     </div>
                   </center>  
@@ -133,9 +163,6 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
-
- 
-  ection>	
   <!-- 回到頂端按鈕 start -->
 <script>
 //<![CDATA[
@@ -173,18 +200,6 @@ resize: function() {goTopMove();}
 } )();
 //]]>
 </script>
-<!-- 回到頂端按鈕 end, Design by WFU BLOG -->
-</body>
-
-<!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/jquery.poptrox.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-
-</body>
+<!-- 回到頂端按鈕 end, Design by WFU BLOG -
 
 </body></html>
